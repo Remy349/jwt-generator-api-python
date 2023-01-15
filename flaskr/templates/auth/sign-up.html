@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="signup">
+  <div class="signup__forms">
+    <form class="signup__form" method="POST" action="">
+      {{ form.csrf_token }}
+      <div class="signup__form-container">
+        <i class='bx bx-user signup__form-icon'></i>
+        {{ form.username(class_='signup__form-input', autocomplete='off') }}
+      </div>
+      <div class="signup__form-container">
+        <i class='bx bx-envelope signup__form-icon'></i>
+        {{ form.email(class_='signup__form-input', autocomplete='off') }}
+      </div>
+      <div class="signup__form-container">
+        <i class='bx bx-lock-alt signup__form-icon'></i>
+        {{ form.password(class_='signup__form-input') }}
+      </div>
+      {{ form.submit(class_='signup__form-btn') }}
+    </form>
+  </div>
+</section>
+{% endblock content %}

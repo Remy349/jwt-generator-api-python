@@ -7,4 +7,8 @@ load_dotenv(os.path.join(basedir, ".env"))
 
 
 class Config(object):
-    secret_key = os.getenv("SECRET_KEY")
+    SECRET_KEY = os.getenv("SECRET_KEY")
+
+
+class DevelopmentConfig(Config):
+    print("DEV Config")
