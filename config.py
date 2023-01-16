@@ -8,7 +8,10 @@ load_dotenv(os.path.join(basedir, ".env"))
 
 class Config(object):
     SECRET_KEY = os.getenv("SECRET_KEY")
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class DevelopmentConfig(Config):
-    print("DEV Config")
+    SQLALCHEMY_DATABASE_URI = "sqlite:////" + os.path.join(
+        basedir, "jwt_generator_api.db"
+    )
