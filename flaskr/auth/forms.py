@@ -1,9 +1,16 @@
 from flaskr import db
 from flask_wtf import FlaskForm
-from wtforms import EmailField, StringField, PasswordField, SubmitField
+from wtforms import BooleanField, EmailField, StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, ValidationError
 
 from flaskr.models import User
+
+
+class SignInForm(FlaskForm):
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
+    remember_me = BooleanField("Remember Me")
+    submit = SubmitField("Sign In")
 
 
 class SignUpForm(FlaskForm):

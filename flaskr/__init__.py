@@ -8,6 +8,8 @@ db = SQLAlchemy()
 migrate = Migrate()
 login_manager = LoginManager()
 
+login_manager.login_view = "auth.signin"
+
 
 def create_app(config_class=DevelopmentConfig):
     app = Flask(__name__)
