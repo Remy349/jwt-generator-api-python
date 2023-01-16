@@ -2,9 +2,11 @@ from flask import Flask
 from config import DevelopmentConfig
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
 db = SQLAlchemy()
 migrate = Migrate()
+login_manager = LoginManager()
 
 
 def create_app(config_class=DevelopmentConfig):
@@ -14,6 +16,7 @@ def create_app(config_class=DevelopmentConfig):
 
     db.init_app(app)
     migrate.init_app(app, db, compare_type=True)
+    login_manager.init_app(app)
 
     from flaskr.main.routes import bp as main_bp
     app.register_blueprint(main_bp)
