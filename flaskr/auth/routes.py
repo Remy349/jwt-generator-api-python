@@ -30,7 +30,7 @@ def signin():
 
         login_user(user, remember=remember_me)
 
-        return redirect(url_for(""))
+        return redirect(url_for("main.index"))
 
     return render_template("auth/sign-in.html", title="Sign In", form=form)
 

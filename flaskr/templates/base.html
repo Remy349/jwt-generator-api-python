@@ -16,8 +16,46 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   </head>
   <body>
+    <header class="header">
+      <nav class="nav container">
+        <a href="{{ url_for('main.index') }}" class="nav__logo">
+          JWTGenerator
+        </a>
+        <div class="nav__menu" id="navMenu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="{{ url_for('main.index') }}" class="nav__link">
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Docs</a>
+            </li>
+            <li class="nav__item">
+              <a href="{{ url_for('auth.signin') }}" class="nav__link">
+                Sign In
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="{{ url_for('auth.signup') }}" class="nav__link nav__btn">
+                Sign Up
+              </a>
+            </li>
+          </ul>
+          <div class="nav__close" id="navClose">
+            <i class='bx bx-x nav__icon'></i>
+          </div>
+        </div>
+        <div class="nav__toggle" id="navToggle">
+          <i class='bx bx-menu nav__icon'></i>
+        </div>
+      </nav>
+    </header>
     <main class="main">
     {% block content %} {% endblock content %}
     </main>
+
+    <!-- SCRIPT JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>

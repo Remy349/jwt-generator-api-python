@@ -7,11 +7,12 @@
       {{ form.csrf_token }}
       <div class="signin__form-container">
         <i class='bx bx-user signin__form-icon'></i>
-        {{ form.username(class_='signin__form-input', autocomplete='off') }}
+        {{ form.username(class_='signin__form-input', autocomplete='off',
+        placeholder='Username') }}
       </div>
       <div class="signin__form-container">
         <i class='bx bx-lock-alt signin__form-icon'></i>
-        {{ form.password(class_='signin__form-input') }}
+        {{ form.password(class_='signin__form-input', placeholder='Password') }}
       </div>
       <div class="signin__form-remember">
         {{ form.remember_me() }} {{ form.remember_me.label }}

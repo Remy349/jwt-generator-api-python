@@ -7,15 +7,17 @@
       {{ form.csrf_token }}
       <div class="signup__form-container">
         <i class='bx bx-user signup__form-icon'></i>
-        {{ form.username(class_='signup__form-input', autocomplete='off') }}
+        {{ form.username(class_='signup__form-input', autocomplete='off',
+        placeholder='Username') }}
       </div>
       <div class="signup__form-container">
         <i class='bx bx-envelope signup__form-icon'></i>
-        {{ form.email(class_='signup__form-input', autocomplete='off') }}
+        {{ form.email(class_='signup__form-input', autocomplete='off',
+        placeholder='Email Address') }}
       </div>
       <div class="signup__form-container">
         <i class='bx bx-lock-alt signup__form-icon'></i>
-        {{ form.password(class_='signup__form-input') }}
+        {{ form.password(class_='signup__form-input', placeholder='Password') }}
       </div>
       {{ form.submit(class_='signup__form-btn') }}
     </form>

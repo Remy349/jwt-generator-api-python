@@ -1,0 +1,84 @@
+@use '../utils/_colors.scss' as c;
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px);
+  line-height: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+
+  &__menu {
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      top: 0;
+      padding: 6rem 0 0 3rem;
+      height: 100vh;
+      right: -100%;
+      width: 70%;
+      background-color: c.$Bg-Color;
+      transition: .3s ease-in-out;
+      box-shadow: -2px 0 10px rgba(0,0,0,.3);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.5rem;
+  }
+
+  &__item {
+    &:last-child {
+      margin-top: 15rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: c.$White-Color;
+  }
+
+  &__btn {
+    background-color: c.$White-Color;
+    color: c.$Bg-Color;
+    padding: .5rem 1.5rem;
+    font-weight: 700;
+    border-radius: .5rem;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: c.$White-Color;
+  }
+
+  &__toggle {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  &__close {
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute;
+    top: .5rem;
+    right: 1.5rem;
+  }
+
+  &__icon {
+    color: c.$White-Color;
+  }
+}
+
+.show-menu {
+  right: 0;
+}
