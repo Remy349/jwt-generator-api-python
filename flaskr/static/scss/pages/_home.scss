@@ -1,0 +1,57 @@
+@use '../utils/_colors.scss' as c;
+@use '../components/_buttons.scss' as comB;
+
+.home {
+  margin-top: 2rem;
+
+  &__title {
+    font-size: 3.5rem;
+    color: c.$White-Color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &-gradient {
+      color: c.$Pink-Color;
+    }
+  }
+
+  &__desc {
+    font-size: 1.25rem;
+    color: c.$Gray-Color;
+    font-weight: 400;
+    text-align: center;
+    margin-top: .5rem;
+  }
+
+  &__btns {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    &-container {
+      width: 80%;
+    }
+
+    &-started {
+      @include comB.home-btns(c.$Pink-Color, c.$Pink-Color);
+
+      &:hover {
+        box-shadow: 0 4px 20px rgba(251, 1, 91, .5);
+      }
+    }
+
+    &-signin {
+      @include comB.home-btns(c.$Bg-Color, c.$White-Color);
+
+      &:hover {
+        background-color: c.$White-Color;
+        color: c.$Bg-Color;
+      }
+    }
+  }
+}

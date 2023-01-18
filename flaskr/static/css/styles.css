@@ -12,6 +12,11 @@ body {
   margin-top: 4rem;
 }
 
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -25,6 +30,10 @@ ul {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   max-width: 768px;
+}
+
+.main {
+  overflow-x: hidden;
 }
 
 .header {
@@ -67,16 +76,38 @@ ul {
   font-size: 1.25rem;
   font-weight: 600;
   color: #fff;
+  position: relative;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  background-color: #00b9f1;
+  height: 2px;
+  top: 1.7rem;
+  width: 100%;
+  left: 0;
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+.nav__link:hover::after {
+  transform: scaleX(1);
 }
 .nav__btn {
-  background-color: #fff;
-  color: #222831;
+  background-color: #00b9f1;
+  color: #fff;
   padding: 0.5rem 1.5rem;
   font-weight: 700;
   border-radius: 0.5rem;
+  font-size: 1.25rem;
+  border: 2px solid #00b9f1;
+  transition: all 0.3s;
+}
+.nav__btn:hover {
+  background-color: #222831;
+  color: #00b9f1;
 }
 .nav__logo {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #fff;
 }
@@ -97,6 +128,72 @@ ul {
 
 .show-menu {
   right: 0;
+}
+
+.home {
+  margin-top: 2rem;
+}
+.home__title {
+  font-size: 3.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home__title-gradient {
+  color: #fb015b;
+}
+.home__desc {
+  font-size: 1.25rem;
+  color: #ddd;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.home__btns {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.home__btns-container {
+  width: 80%;
+}
+.home__btns-started {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: #fb015b;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  border: 2px solid #fb015b;
+  transition: all 0.3s;
+}
+.home__btns-started:hover {
+  box-shadow: 0 4px 20px rgba(251, 1, 91, 0.5);
+}
+.home__btns-signin {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: #222831;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+}
+.home__btns-signin:hover {
+  background-color: #fff;
+  color: #222831;
 }
 
 /*# sourceMappingURL=styles.css.map */

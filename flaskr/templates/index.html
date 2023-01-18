@@ -1,7 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="home">
-  <h1>Home Page</h1>
+<section class="home container">
+  <h1 class="home__title">
+    <span class="home__title-gradient">JWT</span>
+    <span>Generator</span>
+  </h1>
+  <p class="home__desc">
+    Generate your own Json Web Token and use it to query data
+    from our free API. Enjoy the experience!
+  </p>
+  <div class="home__btns">
+    <div class="home__btns-container">
+      <a href="" class="home__btns-started">
+        Get Started
+      </a>
+    </div>
+    <div class="home__btns-container">
+      <a href="{{ url_for('auth.signin') }}" class="home__btns-signin">
+        Sign In
+      </a>
+    </div>
+  </div>
 </section>
 {% endblock content %}

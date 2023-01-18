@@ -16,6 +16,11 @@ body {
   margin-top: 4rem;
 }
 
+h1 {
+  font-family: f.$Josefin;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -29,4 +34,8 @@ ul {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   max-width: 768px;
+}
+
+.main {
+  overflow-x: hidden;
 }

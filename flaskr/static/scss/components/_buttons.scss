@@ -1,0 +1,15 @@
+@use '../utils/_colors.scss' as c;
+
+@mixin home-btns($bg-color, $border-color) {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: $bg-color;
+  border-radius: .5rem;
+  padding: .5rem;
+  color: c.$White-Color;
+  border: 2px solid $border-color;
+  transition: all .3s;
+}
