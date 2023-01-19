@@ -32,6 +32,10 @@ ul {
   max-width: 768px;
 }
 
+.section {
+  padding: 4.5rem 0 2.5rem;
+}
+
 .main {
   overflow-x: hidden;
 }
@@ -194,6 +198,86 @@ ul {
 .home__btns-signin:hover {
   background-color: #fff;
   color: #222831;
+}
+
+.signin__form {
+  background-color: #1f232a;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  display: grid;
+  row-gap: 1.5rem;
+  padding: 3rem 2rem;
+}
+.signin__form-container {
+  border-radius: 0.5rem;
+  border: 2px solid #fb015b;
+  display: grid;
+  grid-template-columns: 2.5rem auto;
+}
+.signin__form-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: transparent;
+  padding: 0.5rem 1.2rem 0.5rem 0.5rem;
+}
+.signin__form-icon {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.signin__form-remember {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+.signin__form-remember input {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  outline: none;
+}
+.signin__form-remember label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.signin__form-btn {
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #222831;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+.signin__form-register {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 1rem;
+}
+.signin__form-register a {
+  color: #fb015b;
+  transition: all 0.3s;
+  text-decoration: underline;
+}
+.signin__form-register a:hover {
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

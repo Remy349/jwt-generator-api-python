@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="signin">
+<section class="signin container section">
   <div class="signin__forms">
     <form class="signin__form" method="POST" action="">
       {{ form.csrf_token }}
@@ -18,6 +18,12 @@
         {{ form.remember_me() }} {{ form.remember_me.label }}
       </div>
       {{ form.submit(class_='signin__form-btn') }}
+      <p class="signin__form-register">
+        New User?
+        <a href="{{ url_for('auth.signup') }}">
+          Click to Register!
+        </a>
+      </p>
     </form>
   </div>
 </section>
