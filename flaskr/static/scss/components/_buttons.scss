@@ -1,4 +1,5 @@
 @use '../utils/_colors.scss' as c;
+@use '../utils/_fonts.scss' as f;
 
 @mixin home-btns($bg-color, $border-color) {
   display: flex;
@@ -12,4 +13,19 @@
   color: c.$White-Color;
   border: 2px solid $border-color;
   transition: all .3s;
+}
+
+@mixin auth-btns {
+  border: none;
+  border-radius: .5rem;
+  font-size: 1.25rem;
+  padding: .5rem 0;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  background-color: c.$White-Color;
+  color: c.$Bg-Color;
+  width: 100%;
+  font-family: f.$Nunito;
+  font-weight: 600;
 }

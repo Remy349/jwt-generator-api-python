@@ -1,0 +1,32 @@
+@use '../components/_forms.scss' as comF;
+@use '../components/_buttons.scss' as comB;
+@use '../utils/_colors.scss' as c;
+
+.signup {
+  &__form {
+    @include comF.auth-form;
+
+    &-container {
+      border-radius: .5rem;
+      border: 2px solid c.$Pink-Color;
+      display: grid;
+      grid-template-columns: 2.5rem auto;
+    }
+
+    &-input {
+      @include comF.input-form;
+    }
+
+    &-icon {
+      color: c.$White-Color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+
+    &-btn {
+      @include comB.auth-btns;
+    }
+  }
+}

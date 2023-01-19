@@ -1,15 +1,11 @@
 @use '../utils/_colors.scss' as c;
 @use '../utils/_fonts.scss' as f;
+@use '../components/_forms.scss' as comF;
+@use '../components/_buttons.scss' as comB;
 
 .signin {
   &__form {
-    background-color: c.$Form-Color;
-    border-radius: .5rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,.2);
-    width: 100%;
-    display: grid;
-    row-gap: 1.5rem;
-    padding: 3rem 2rem;
+    @include comF.auth-form;
 
     &-container {
       border-radius: .5rem;
@@ -19,15 +15,7 @@
     }
 
     &-input {
-      width: 100%;
-      border: none;
-      outline: none;
-      font-size: 1.2rem;
-      font-family: f.$Nunito;
-      font-weight: 600;
-      color: c.$White-Color;
-      background-color: transparent;
-      padding: .5rem 1.2rem .5rem .5rem;
+      @include comF.input-form;
     }
 
     &-icon {
@@ -58,18 +46,7 @@
     }
 
     &-btn {
-      border: none;
-      border-radius: .5rem;
-      font-size: 1.3rem;
-      padding: .5rem 0;
-      cursor: pointer;
-      outline: none;
-      text-transform: uppercase;
-      background-color: c.$White-Color;
-      color: c.$Bg-Color;
-      width: 100%;
-      font-family: f.$Nunito;
-      font-weight: 600;
+      @include comB.auth-btns;
     }
 
     &-register {

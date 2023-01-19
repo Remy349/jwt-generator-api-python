@@ -2,8 +2,6 @@
 @use '../components/_buttons.scss' as comB;
 
 .home {
-  margin-top: 2rem;
-
   &__title {
     font-size: 3.5rem;
     color: c.$White-Color;
