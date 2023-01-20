@@ -10,7 +10,7 @@ load_dotenv(os.path.join(basedir, ".env"))
 class Config(object):
     SECRET_KEY = os.getenv("SECRET_KEY")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    REMEMBER_COOKIE_DURATION = timedelta(seconds=10)
+    REMEMBER_COOKIE_DURATION = timedelta(minutes=1)
 
 
 class DevelopmentConfig(Config):

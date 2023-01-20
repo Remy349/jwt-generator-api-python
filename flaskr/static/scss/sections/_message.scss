@@ -1,0 +1,28 @@
+@use '../utils/_colors.scss' as c;
+@use '../components/_messages.scss' as comM;
+
+.messages {
+  display: grid;
+  row-gap: 1rem;
+  padding-top: 1rem;
+  margin-bottom: -2rem;
+  transition: all .5s;
+
+  &__error {
+    @include comM.info-messages(c.$Red-Color);
+  }
+
+  &__success {
+    @include comM.info-messages(c.$Green-Color);
+  }
+
+  &__text {
+    color: c.$White-Color;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+.hide-message {
+  transform: translateY(-20rem);
+}

@@ -37,16 +37,11 @@
     row-gap: 3.5rem;
   }
 
-  &__item {
-    &:last-child {
-      margin-top: 15rem;
-    }
-  }
-
   &__link {
     font-size: 1.25rem;
     font-weight: 600;
     color: c.$White-Color;
+    text-transform: uppercase;
     position: relative;
 
     &::after {
@@ -65,22 +60,6 @@
       &::after {
         transform: scaleX(1);
       }
-    }
-  }
-
-  &__btn {
-    background-color: c.$Blue-Color;
-    color: c.$White-Color;
-    padding: .5rem 1.5rem;
-    font-weight: 700;
-    border-radius: .5rem;
-    font-size: 1.25rem;
-    border: 2px solid c.$Blue-Color;
-    transition: all .3s;
-
-    &:hover {
-      background-color: c.$Bg-Color;
-      color: c.$Blue-Color;
     }
   }
 

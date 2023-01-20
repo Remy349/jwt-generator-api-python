@@ -31,16 +31,24 @@
             <li class="nav__item">
               <a href="" class="nav__link">Docs</a>
             </li>
+            {% if current_user.is_anonymous %}
             <li class="nav__item">
               <a href="{{ url_for('auth.signin') }}" class="nav__link">
                 Sign In
               </a>
             </li>
             <li class="nav__item">
-              <a href="{{ url_for('auth.signup') }}" class="nav__btn">
+              <a href="{{ url_for('auth.signup') }}" class="nav__link">
                 Sign Up
               </a>
             </li>
+            {% else %}
+            <li class="nav__item">
+              <a href="{{ url_for('auth.logout') }}" class="nav__link">
+                Logout
+              </a>
+            </li>
+            {% endif %}
           </ul>
           <div class="nav__close" id="navClose">
             <i class='bx bx-x nav__icon'></i>
@@ -51,6 +59,19 @@
         </div>
       </nav>
     </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class="messages container" id="messages">
+    {% for category, message in messages %}
+      <li class="messages__{{ category }}">
+        <span class="messages__text">{{ message }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
     <main class="main">
     {% block content %} {% endblock content %}
     </main>
