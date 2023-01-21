@@ -23,6 +23,7 @@
         </a>
         <div class="nav__menu" id="navMenu">
           <ul class="nav__list">
+            {% if current_user.is_anonymous %}
             <li class="nav__item">
               <a href="{{ url_for('main.index') }}" class="nav__link">
                 Home
@@ -31,7 +32,6 @@
             <li class="nav__item">
               <a href="" class="nav__link">Docs</a>
             </li>
-            {% if current_user.is_anonymous %}
             <li class="nav__item">
               <a href="{{ url_for('auth.signin') }}" class="nav__link">
                 Sign In
@@ -43,6 +43,17 @@
               </a>
             </li>
             {% else %}
+            <li class="nav__item">
+              <a
+                href="{{ url_for('user.profile', username=current_user.username) }}"
+                class="nav__link"
+              >
+                {{ current_user.username }}
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Docs</a>
+            </li>
             <li class="nav__item">
               <a href="{{ url_for('auth.logout') }}" class="nav__link">
                 Logout

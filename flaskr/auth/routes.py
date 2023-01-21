@@ -1,4 +1,3 @@
-from datetime import timedelta
 from flaskr import db
 from flask import Blueprint, flash, redirect, render_template, url_for
 from flask_login import current_user, logout_user, login_user
@@ -32,7 +31,7 @@ def signin():
 
             login_user(user)
 
-            return redirect(url_for("main.index"))
+            return redirect(url_for("user.profile", username=username))
         except NoResultFound:
             flash("Invalid username!", "error")
             # return redirect(url_for("auth.signin"))
